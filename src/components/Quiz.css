@@ -40,6 +40,29 @@ Hint: You can use the className attribute for highlighting. */
     padding: 0;
   }
   
+  /* Hover effect */
+  li:hover {
+    border-color: #aaa;
+    background-color: #f1f1f1;
+  }
+
+  /* Selected option styling */
+  li.selected {
+    border-color: #4f46e5;        /* Indigo border */
+    background-color: #e0e7ff;    /* Light indigo background */
+    color: #1e1b4b;               /* Dark indigo text */
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+    transform: scale(1.02);       /* Slight enlargement */
+  }
+
+  li.selected::after {
+    content: "✓";
+    float: right;
+    color: #4338ca;
+    font-weight: bold;
+  }
+  
   li {
     cursor: pointer;
     font-size: 16px;
